@@ -41,8 +41,8 @@ class MyDocument extends Document {
                 </Head>
 
                 <body>
-                <Main />
-                <NextScript />
+                    <Main />
+                    <NextScript />
                 </body>
             </Html>
         )
