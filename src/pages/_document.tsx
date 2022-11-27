@@ -22,7 +22,7 @@ class MyDocument extends Document {
                 styles: (
                     <>
                         {initialProps.styles}
-                        {/* Generate the style tag and return it as a 'styles' prop */}
+                        {/* Generate the style tag and return it as a "styles" prop */}
                         {sheet.getStyleElement()}
                     </>
                 )

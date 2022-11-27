@@ -1,10 +1,10 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css"
+import type { AppProps } from "next/app"
 import {
     defaultTheme,
     ThemeProvider,
     Preflight,
-} from '@xstyled/styled-components'
+} from "@xstyled/styled-components"
 
 export default function App({ Component, pageProps }: AppProps) {
     return (

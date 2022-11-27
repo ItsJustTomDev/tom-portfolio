@@ -33,8 +33,8 @@ const Projects = () => {
     const textPosition = useTransform(scrollYProgress, [0, fullScreenPoint], ["20%", "33.33%"]);
 
     const components = [
-        <ProjectsInitial />,
-        <ProjectListing img={projectOne.src}
+        <ProjectsInitial key={1} />,
+        <ProjectListing key={2} img={projectOne.src}
             title={"Project - Personal blog"}
             madeWith={"Nextjs"}
             description={`
@@ -48,7 +48,7 @@ const Projects = () => {
             actionUrl={"https://github.com/ItsJustTomDev/tomdev-blog"}
         />,
 
-        <ProjectListing img={projectTwo.src}
+        <ProjectListing key={3} img={projectTwo.src}
             title={"Project - Therapy Website"}
             madeWith={"Nextjs"}
             description={`
@@ -62,7 +62,7 @@ const Projects = () => {
             actionUrl={"https://irmatherapia.dyslexia-correction.gr/"}
         />,
 
-        <ProjectListing img={projectTwo.src}
+        <ProjectListing key={4} img={projectTwo.src}
             title={"Project - ShoppyList"}
             madeWith={"ReactNative"}
             description={`
@@ -78,7 +78,7 @@ const Projects = () => {
         />,
 
 
-        <ProjectsEnd />
+        <ProjectsEnd key={5} />
 
     ]
 

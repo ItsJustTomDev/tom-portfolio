@@ -28,7 +28,7 @@ const About = ({ scrollYProgress }: any) => {
                         <br /> <br />
 
                         For me, there is just something about the web that I absolutely love.
-                        I love watching the code give life to something, it's magical.
+                        I love watching the code give life to something, its magical.
                     </x.p>
                 </x.div>
             </x.div>

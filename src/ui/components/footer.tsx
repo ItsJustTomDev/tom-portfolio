@@ -31,7 +31,7 @@ const Footer = () => {
 
                 <x.div position={"relative"} w={"fit-content"} pt={6}>
                     <OutlinedText>CONTACT</OutlinedText>
-                    <x.h2 fontSize={"7rem"} fontWeight={"bold"} position={"absolute"} bottom={-45} left={"20%"}>Let's Talk</x.h2>
+                    <x.h2 fontSize={"7rem"} fontWeight={"bold"} position={"absolute"} bottom={-45} left={"20%"}>Lets Talk</x.h2>
                 </x.div>
 
 

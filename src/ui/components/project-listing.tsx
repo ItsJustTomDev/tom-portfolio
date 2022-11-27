@@ -29,8 +29,8 @@ const ProjectListing = ({ img, title, description, madeWith, techStack, actionTe
                         <x.div>
                             <x.h2 fontSize={"2rem"} color={"white"} fontWeight={"bold"}>Tech Stack</x.h2>
                             <x.ul fontSize={"1.5rem"} color={"white"}>
-                                {techStack.map((tech: string) => (
-                                    <x.li>{tech}</x.li>
+                                {techStack.map((tech: string, index: number) => (
+                                    <x.li key={index}>{tech}</x.li>
                                 ))}
                             </x.ul>
                         </x.div>
