@@ -29,9 +29,33 @@ button {
 }
 
 @font-face {
-  src: url("/fonts/clashy-font.ttf") format("ttf");
+  src: url("/fonts/clashy-font.ttf");
   font-family: "Clash Display Variable";
   font-weight: 400;
+}
+
+@font-face {
+  src: url("/fonts/clashy-font.ttf");
+  font-family: "Clash Display Variable";
+  font-weight: 500;
+}
+
+@font-face {
+  src: url("/fonts/clashy-font.ttf");
+  font-family: "Clash Display Variable";
+  font-weight: 600;
+}
+
+@font-face {
+  src: url("/fonts/clashy-font.ttf");
+  font-family: "Clash Display Variable";
+  font-weight: 700;
+}
+
+@font-face {
+  src: url("/fonts/clashy-font.ttf");
+  font-family: "Clash Display Variable";
+  font-weight: 800;
 }
 
 @media only screen and (min-width: 1200px) {
