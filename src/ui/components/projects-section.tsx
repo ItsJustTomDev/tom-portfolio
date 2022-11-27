@@ -10,6 +10,7 @@ import ProjectsEnd from "./projects-end";
 
 import projectOne from "@assets/images/project-1.png";
 import projectTwo from "@assets/images/project-2.png";
+import projectThree from "@assets/images/project-3.png";
 
 const Projects = () => {
     const ref = useRef(null);
@@ -62,7 +63,7 @@ const Projects = () => {
             actionUrl={"https://irmatherapia.dyslexia-correction.gr/"}
         />,
 
-        <ProjectListing key={4} img={projectTwo.src}
+        <ProjectListing key={4} img={projectThree.src}
             title={"Project - ShoppyList"}
             madeWith={"ReactNative"}
             description={`
