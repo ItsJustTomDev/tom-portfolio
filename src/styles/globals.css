@@ -29,7 +29,7 @@ button {
 }
 
 @font-face {
-  src: url("/fonts/clashy-font.ttf");
+  src: url("/fonts/clashy-font.ttf") format("ttf");
   font-family: "Clash Display Variable";
   font-weight: 400;
 }
