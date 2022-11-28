@@ -21,7 +21,7 @@ const ProjectListing = ({ img, title, description, madeWith, techStack, actionTe
 
             <x.div display={"flex"} flexDirection={"column"}>
                 <x.div display={"flex"} gap={4}>
-                    <x.h1 fontSize={"10rem"} fontWeight={"bold"} color={"white"}>Build with</x.h1>
+                    <x.h1 fontSize={"10rem"} fontWeight={"bold"} color={"white"}>Built with</x.h1>
                     <OutlinedText>{madeWith}</OutlinedText>
                 </x.div>
 
