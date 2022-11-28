@@ -1,13 +1,23 @@
 import React from "react";
-import { x } from "@xstyled/styled-components"
 import styled from "styled-components"
+import sideArrow from "@assets/images/arrow-2.svg";
 
-import github from "@assets/images/github.svg"
+import { x } from "@xstyled/styled-components"
 
-const ProjectListing = ({ img, title, description, madeWith, techStack, actionText, actionUrl }: any) => {
+type Props = {
+    img: string,
+    title: string,
+    description: string,
+    madeWith: string,
+    techStack: string[],
+    actionText: string,
+    actionUrl: string
+}
+
+const ProjectListing = ({ img, title, description, madeWith, techStack, actionText, actionUrl }: Props) => {
 
     return (
-        <x.div bg={"#282828"} h={"100vh"} pt={10} display={"flex"} justifyContent={"center"} >
+        <x.div bg={"#282828"} h={"100vh"} pt={10} display={"flex"} flexDirection={"column"} alignItems={"center"} >
 
             <x.div display={"flex"} flexDirection={"column"}>
                 <x.div display={"flex"} gap={4}>
@@ -17,7 +27,7 @@ const ProjectListing = ({ img, title, description, madeWith, techStack, actionTe
 
                 <x.div display={"flex"} gap={6}>
                     <x.div>
-                        <img src={img} alt="" />
+                        <x.img src={img} alt="" />
                     </x.div>
 
                     <x.div display={"flex"} flexDirection={"column"} maxWidth={"fit-content"} justifyContent={"space-between"}>
@@ -41,7 +51,14 @@ const ProjectListing = ({ img, title, description, madeWith, techStack, actionTe
                     </x.div>
                 </x.div>
             </x.div>
-        </x.div>
+
+            <x.div display={"flex"} flex={1} alignItems={"flex-end"} mb={16}>
+                <x.div display={"flex"} flexDirection={"column"}>
+                    <x.h2 color={"white"} fontSize={"1.5rem"} fontWeight={"semibold"}>Keep scrolling</x.h2>
+                    <x.img src={sideArrow.src} />
+                </x.div>
+            </x.div>
+        </x.div >
     )
 }
 

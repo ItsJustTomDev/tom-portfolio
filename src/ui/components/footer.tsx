@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components"
 
 import { x } from "@xstyled/styled-components"
 
-
 const Footer = () => {
-
-    const [contact, setContact] = useState([
+    const contactInformation = [
         {
             name: "Email",
             height: 24,
@@ -22,8 +20,7 @@ const Footer = () => {
             height: 64,
             action: "https://www.linkedin.com/in/tom-wuijster-3b2645248/"
         }
-    ])
-
+    ]
 
     return (
         <x.div h={"35vh"} bg={"#FDFAF5"} px={16} display={"flex"}>
@@ -45,13 +42,13 @@ const Footer = () => {
             <x.div h={"full"} w={"full"}>
                 <x.div display={"flex"} w={"100%"} justifyContent={"center"} gap={"10%"} mr={32}>
 
-                    {contact.map((element, index) => (
+                    {contactInformation.map((contact, index) => (
                         <x.div key={index} display={"flex"} flexDirection={"column"} alignItems={"center"}>
-                            <x.span w={"0.2rem"} h={element.height} bg={"#232323"}></x.span>
+                            <x.span w={"0.2rem"} h={contact.height} bg={"#232323"}></x.span>
                             <x.div bg={"#232323"} w={16} h={16} borderRadius={"full"}>
-                                <x.a href={element.action}>
+                                <x.a href={contact.action}>
                                     <x.button w={52} h={16} borderRadius={"full"} bg={"transparent"} border={"2px solid #232323"} pl={12}>
-                                        <x.h2 fontSize={"1.5rem"} fontWeight={"semibold"}>{element.name}</x.h2>
+                                        <x.h2 fontSize={"1.5rem"} fontWeight={"semibold"}>{contact.name}</x.h2>
                                     </x.button>
                                 </x.a>
                             </x.div>

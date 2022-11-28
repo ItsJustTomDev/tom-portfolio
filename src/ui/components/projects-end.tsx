@@ -1,11 +1,12 @@
 import React from "react";
-import { x } from "@xstyled/styled-components"
-
 import styled from "styled-components";
+import arrowThree from "@assets/images/arrow-3.svg";
+
+import { x } from "@xstyled/styled-components"
 
 const ProjectsEnd = () => {
     return (
-        <x.div h={"100vh"} bg={"#282828"} pt={"24"}>
+        <x.div h={"100vh"} bg={"#282828"} pt={"24"} display={"flex"} flexDirection={"column"}>
             <x.div display={"flex"} flexDirection={"column"} justifyContent={"center"} alignItems={"center"} w={"full"}>
                 <x.div textAlign={"center"}>
                     <x.h1 fontSize={"10rem"} fontWeight={"bold"} color={"white"}>Hope you enjoyed my</x.h1>
@@ -25,6 +26,13 @@ const ProjectsEnd = () => {
                             px={"1rem"}
                         >Contact me</x.button>
                     </x.a>
+                </x.div>
+            </x.div>
+
+            <x.div flex={1} display={"flex"} justifyContent={"center"} alignItems={"flex-end"}>
+                <x.div display={"flex"} flexDirection={"column"} alignItems={"center"} gap={3} mb={36}>
+                    <x.h2 color={"white"} fontSize={"1.5rem"} fontWeight={"semibold"}>Keep scrolling</x.h2>
+                    <x.img w={8} src={arrowThree.src} />
                 </x.div>
             </x.div>
         </x.div>

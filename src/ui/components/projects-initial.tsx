@@ -1,18 +1,22 @@
 import React from "react";
+import styled from "styled-components";
+import sideArrow from "@assets/images/arrow-2.svg";
 
 import { x } from "@xstyled/styled-components";
-import styled from "styled-components";
-
-// 40 px to rem = 2.5rem
 
 const ProjectsInitial = () => {
-
-
     return (
-        <x.div pt={32} pl={16}>
-            <x.div position={"relative"}>
+        <x.div display={"flex"} flexDirection={"column"} h={"full"}>
+            <x.div pt={32} pl={16} position={"relative"}>
                 <OutlinedText>PROJECTS</OutlinedText>
-                <x.h2 fontSize={"4rem"} color={"white"} fontWeight={"semibold"} position={"absolute"} top={"3rem"} left={"5rem"}>Projects</x.h2>
+                <x.h2 fontSize={"4rem"} color={"white"} fontWeight={"semibold"} position={"absolute"} bottom={"7rem"} left={"10rem"}>Projects</x.h2>
+            </x.div>
+
+            <x.div display={"flex"} flex={1} justifyContent={"center"} alignItems={"flex-end"} mb={16}>
+                <x.div display={"flex"} flexDirection={"column"}>
+                    <x.h2 color={"white"} fontSize={"1.5rem"} fontWeight={"semibold"}>Keep scrolling</x.h2>
+                    <x.img src={sideArrow.src} />
+                </x.div>
             </x.div>
         </x.div>
     )

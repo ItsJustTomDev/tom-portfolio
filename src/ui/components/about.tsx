@@ -1,13 +1,14 @@
 import React from "react";
-import { x } from "@xstyled/styled-components";
 import styled from "styled-components";
+
+import { x } from "@xstyled/styled-components";
 import { motion, useTransform } from "framer-motion";
 
 const About = ({ scrollYProgress }: any) => {
     const scale = useTransform(scrollYProgress, [0.5, 1], [0, 1])
 
     return (
-        <x.div id="about" as={motion.div} style={{ scale: scale }} display={"flex"} pt={24} justifyContent={"space-around"} h={"100vh"}>
+        <x.div id="about" as={motion.div} style={{ scale: scale }} display={"flex"} pt={24} justifyContent={"space-around"} h={"100vh"} overflow={"hidden"}>
             <x.div w={"50%"}>
                 <x.div pl={16}>
                     <x.div position={"relative"}>
@@ -19,7 +20,7 @@ const About = ({ scrollYProgress }: any) => {
                 <x.div pl={32}>
                     <x.p fontSize={"1.5rem"} w={"50%"}>
                         Hi, Tom here. Obviously!
-                        {/* Breaks for to create new lines :) */}
+                        {/* Breaks to create new lines :) */}
                         <br /> <br />
 
                         As a frontend web developer, I solve everyday development problems through my work.
@@ -35,14 +36,13 @@ const About = ({ scrollYProgress }: any) => {
 
             <x.div display={"flex"} flexDirection={"column"} w={"30%"} gap={24}>
                 <x.div>
-                    <x.h1 fontSize={"2.5rem"} fontWeight={"medium"}>Frontend Tools</x.h1>
-                    <x.p fontSize={"1.5rem"} w={"60%"}>Typescript, Javascript, HTML5, React.js Next.js, Redux Toolkit, React Testing Library, Jest, Git/Github</x.p>
+                    <x.h1 fontSize={"2.5rem"} fontWeight={"medium"}>Programming Languages</x.h1>
+                    <x.p fontSize={"1.5rem"} w={"60%"}>Typescript, Javascript, HTML5, CSS3, SASS, MySQL, Firestore Security Rules.</x.p>
                 </x.div>
 
-
                 <x.div>
-                    <x.h1 fontSize={"2.5rem"} fontWeight={"medium"}>UI Libraries</x.h1>
-                    <x.p fontSize={"1.5rem"} w={"60%"}>CSS3/SCSS/SASS, Framer Motion, GSAP, Styled Components, Tailwind CSS, Material UI, Chakra UI.</x.p>
+                    <x.h1 fontSize={"2.5rem"} fontWeight={"medium"}>Frameworks & Libraries</x.h1>
+                    <x.p fontSize={"1.5rem"} w={"60%"}>ReactJS, NextJS, NextAuth, MongoDB, Firebase(Google Cloud Platform), Framer Motion, Styled Components, xStyled </x.p>
                 </x.div>
 
                 <x.div>
@@ -50,11 +50,6 @@ const About = ({ scrollYProgress }: any) => {
                     <x.p fontSize={"1.5rem"} w={"60%"}>Three.js, React Three Fiber, UI/UX design, Framer Motion.</x.p>
                 </x.div>
             </x.div>
-
-
-
-
-
         </x.div>
     )
 }

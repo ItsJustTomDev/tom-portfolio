@@ -1,16 +1,16 @@
 import React, { useRef } from "react";
-import { x } from "@xstyled/styled-components"
 import styled from "styled-components";
-import ProjectsInitial from "./projects-initial";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import ProjectsInitial from "./projects-initial";
 import ProjectListing from "./project-listing";
 import ProjectsEnd from "./projects-end";
 
+import { x } from "@xstyled/styled-components"
+import { motion, useScroll, useTransform } from "framer-motion";
 
-import projectOne from "@assets/images/project-1.png";
-import projectTwo from "@assets/images/project-2.png";
-import projectThree from "@assets/images/project-3.png";
+import projectOne from "@assets/images/project-1.svg";
+import projectTwo from "@assets/images/project-2.svg";
+import projectThree from "@assets/images/project-3.svg";
 
 const Projects = () => {
     const ref = useRef(null);
@@ -19,19 +19,10 @@ const Projects = () => {
         target: ref,
     })
 
-
-
-    const fullScreenPoint = 0.2;
+    const fullScreenPoint = 0.15;
     const yValue = useTransform(scrollYProgress, [0, fullScreenPoint], ["0rem", "-28rem"]);
     const padding = useTransform(scrollYProgress, [0, fullScreenPoint], ["5rem,", "0rem"]);
     const height = useTransform(scrollYProgress, [0, fullScreenPoint], ["60vh", "100vh"]);
-
-    const rotateArrow = useTransform(scrollYProgress, [0, fullScreenPoint], ["0deg", "-90deg"]);
-    const widthArrow = useTransform(scrollYProgress, [0, fullScreenPoint], ["1%", "3%"]);
-    const arrowTextTop = useTransform(scrollYProgress, [0, fullScreenPoint], ["6rem", "16rem"]);
-    const arrowTextLeft = useTransform(scrollYProgress, [0, fullScreenPoint], ["46.5%", "45%"]);
-
-    const textPosition = useTransform(scrollYProgress, [0, fullScreenPoint], ["20%", "33.33%"]);
 
     const components = [
         <ProjectsInitial key={1} />,
@@ -84,10 +75,10 @@ const Projects = () => {
     ]
 
     const xRange = ["0vw", `-${(components.length - 1) * 100}vw`];
-    const xValue = useTransform(scrollYProgress, [fullScreenPoint + 0.05, 1], xRange);
+    const xValue = useTransform(scrollYProgress, [0.28, 0.98], xRange);
 
     return (
-        <x.div ref={ref} h={"300vh"} w={"full"} bg={"#FDFAF5"}>
+        <x.div ref={ref} h={"500vh"} w={"full"} bg={"#FDFAF5"} >
 
             <x.div as={motion.div} pb={5} style={{ padding: padding }} pt={"0 !important"} position={"sticky"} top={0} h={"100vh"} overflow={"hidden"} >
 
@@ -105,8 +96,6 @@ const Projects = () => {
                     </x.div>
                 </x.div>
 
-
-
                 <x.div>
                     <x.div
                         as={motion.div}
@@ -115,7 +104,6 @@ const Projects = () => {
                         w={"full"}
                         style={{ y: yValue, height: height }}
                     >
-
                         <x.div
                             as={motion.div}
                             w={"full"}
@@ -133,7 +121,6 @@ const Projects = () => {
                 </x.div>
             </x.div>
         </x.div >
-
     )
 
 }
