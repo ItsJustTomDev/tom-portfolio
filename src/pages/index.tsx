@@ -25,7 +25,7 @@ export default function Home() {
     }
 
     useEffect(() => {
-        setIsMobile(window.innerWidth < 768)
+        setIsMobile(window.innerWidth < 1400)
     }, [])
 
     return (
