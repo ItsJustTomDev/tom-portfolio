@@ -11,6 +11,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import projectOne from "@assets/images/project-1.svg";
 import projectTwo from "@assets/images/project-2.svg";
 import projectThree from "@assets/images/project-3.svg";
+import projectFour from "@assets/images/project-4.svg";
 
 const Projects = () => {
     const ref = useRef(null);
@@ -26,7 +27,20 @@ const Projects = () => {
 
     const components = [
         <ProjectsInitial key={1} />,
-        <ProjectListing key={2} img={projectOne.src}
+        <ProjectListing key={2} img={projectFour.src}
+            title={"Project - Github Clone"}
+            madeWith={"React"}
+            description={`
+            This project is a github clone that I made for the fun.
+            In this project I have used all my best-practices, I have made this with ReactJS.
+            `}
+
+            techStack={["React", "Vite", "Typescript", "SWR", "Tailwind"]}
+            actionText={"View the website"}
+            actionUrl={"https://github-clone.tomwuijster.dev"}
+        />,
+
+        <ProjectListing key={3} img={projectOne.src}
             title={"Project - Personal blog"}
             madeWith={"Nextjs"}
             description={`
@@ -40,7 +54,7 @@ const Projects = () => {
             actionUrl={"https://github.com/ItsJustTomDev/tomdev-blog"}
         />,
 
-        <ProjectListing key={3} img={projectTwo.src}
+        <ProjectListing key={4} img={projectTwo.src}
             title={"Project - Therapy Website"}
             madeWith={"Nextjs"}
             description={`
@@ -54,7 +68,7 @@ const Projects = () => {
             actionUrl={"https://irmatherapia.dyslexia-correction.gr/"}
         />,
 
-        <ProjectListing key={4} img={projectThree.src}
+        <ProjectListing key={5} img={projectThree.src}
             title={"Project - ShoppyList"}
             madeWith={"ReactNative"}
             description={`
@@ -70,7 +84,7 @@ const Projects = () => {
         />,
 
 
-        <ProjectsEnd key={5} />
+        <ProjectsEnd key={6} />
 
     ]
 
